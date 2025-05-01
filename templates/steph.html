@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Curry &gt; LeBron • GOAT Campaign</title>
+  <link
+    rel="icon"
+    href="https://logos-world.net/wp-content/uploads/2020/05/Golden-State-Warriors-logo.png"
+    type="image/png"
+  />
+  <!-- Open Graph / Facebook Embed -->
+  <meta property="og:title" content="Curry>Lebron" />
+  <meta
+    property="og:description"
+    content="Why Stephen Curry is the true GOAT"
+  />
+  <meta
+    property="og:image"
+    content="https://media.discordapp.net/attachments/1140839432489009263/1367428886690005042/image-removebg-preview_11.png?ex=68148ce4&is=68133b64&hm=70c3ced259c48f4e6ad1670fef0c17f054c2849c6be2eb2de1f3a0dfe8bfe692&=&format=webp&quality=lossless"
+  />
+  <meta property="og:url" content="https://stephen-curry.onrender.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sinners pastes – Pastebin" />
+  <meta
+    name="twitter:description"
+    content="Why Stephen Curry is the true GOAT"
+  />
+  <meta
+    name="twitter:image"
+    content="https://media.discordapp.net/attachments/1140839432489009263/1367428886690005042/image-removebg-preview_11.png?ex=68148ce4&is=68133b64&hm=70c3ced259c48f4e6ad1670fef0c17f054c2849c6be2eb2de1f3a0dfe8bfe692&=&format=webp&quality=lossless"
+  />    
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- CountUp.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+
+  <style>
+    /* GLOBAL RESET */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Montserrat',sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; display:block; }
+
+    /* BUTTON HOVER ANIMATION */
+    .btn { transition: transform .2s; }
+    .btn:hover { transform: scale(1.05); }
+
+    /* SECTION ANIMATIONS */
+    section { opacity:0; }
+    .animate-on-scroll { opacity:0; }
+    .animate__animated { opacity:1 !important; }
+
+    /* HERO DARK */
+    #hero1 {
+      position:relative;
+      height:100vh;
+      /* fallback background if image fails */
+      background:url('assets/hero-bg.jpg') center/cover no-repeat fixed;
+    }
+    #hero1::after {
+      content:''; position:absolute; inset:0; background:rgba(0,0,0,0.75); z-index:2;
+    }
+    .hero-img {
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:1;
+    }
+    .hero1-content {
+      position:relative;
+      z-index:3;
+      max-width:1200px;
+      margin:0 auto;
+      padding:3rem;
+      text-align:center;
+    }
+    .hero1-content h1 {
+      font-size:4rem; font-weight:800; letter-spacing:2px;
+    }
+
+    /* PLAYER CARDS */
+    .player-cards {
+      display:flex; justify-content:center; flex-wrap:wrap; gap:1.5rem; margin-top:2rem;
+    }
+    .player-card {
+      background:rgba(255,255,255,0.1); border:2px solid #f9f4e6; border-radius:12px;
+      width:150px; padding:1rem; text-align:center; transition: transform .3s, box-shadow .3s;
+    }
+    .player-card img {
+      width:80px; height:80px; object-fit:cover; border-radius:50%; margin-bottom:0.5rem;
+    }
+    .player-card h4 {
+      font-size:1rem; margin-bottom:0.5rem; color:#f9f4e6; text-transform:uppercase;
+    }
+    .player-card ul {
+      list-style:none; padding:0; margin:0; font-size:0.85rem; color:#ddd; text-align:left;
+    }
+    .player-card ul li { margin:0.3rem 0; }
+    .player-card:hover {
+      transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.7);
+    }
+
+    /* HERO CTA */
+    #hero2 {
+      padding:5rem 2rem; text-align:center;
+      background:linear-gradient(135deg,#2e3192,#1bffff);
+      clip-path:polygon(0 0,100% 0,100% 75%,0 100%);
+    }
+    #hero2 h2 {
+      font-size:3.5rem; font-weight:600; color:#f9f4e6;
+    }
+    .hero2-buttons {
+      margin-top:1.5rem;
+    }
+    .btn {
+      padding:0.75rem 2rem; margin:0 .5rem; border:2px solid #f9f4e6;
+      border-radius:50px; font-weight:600;
+    }
+    .btn.primary { background:#f9f4e6; color:#2e3192; }
+    .btn.outline { background:transparent; color:#f9f4e6; }
+    .btn.outline:hover { background:rgba(249,244,230,0.2); }
+
+    /* TIMELINE */
+    #timeline { padding:6rem 2rem; background:#1a1a1a; }
+    .timeline-container { max-width:1000px; margin:0 auto; }
+    .timeline-item {
+      display:grid; grid-template-columns:1fr 2fr; gap:1.5rem;
+      margin-bottom:3rem; align-items:center;
+    }
+    .timeline-item:nth-child(even) { grid-template-columns:2fr 1fr; }
+    .timeline-item img {
+      width:100%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    }
+    .timeline-item .info h4 { font-size:1.8rem; margin-bottom:.5rem; }
+    .timeline-item .info p { font-size:1rem; line-height:1.6; color:#ddd; }
+
+    /* STATS & TROPHIES */
+    #stats { padding:6rem 2rem; background:url('assets/stadium-bg.jpg') center/cover no-repeat; position:relative; }
+    #stats::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.6); }
+    .stats-container { position:relative; z-index:2; max-width:1200px; margin:0 auto; }
+    .stats-container h3 { text-align:center; font-size:2.5rem; margin-bottom:2rem; color:#f9f4e6; }
+    .stats-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:2rem;
+    }
+    .stats-grid .card {
+      background:rgba(255,255,255,0.1); padding:2rem; border-radius:12px; text-align:center;
+    }
+    .stats-grid .card h4 { font-size:2.5rem; margin-bottom:.3rem; }
+    .stats-grid .card span { font-size:0.9rem; text-transform:uppercase; color:#ddd; }
+
+    .trophies {
+      display:flex; justify-content:center; gap:3rem; margin:4rem 0; flex-wrap:wrap;
+    }
+    .trophies .group { text-align:center; }
+    .trophies .group img { width:60px; margin-bottom:.5rem; }
+    .trophies .group p { font-size:1.1rem; }
+
+    /* VIDEOS */
+    #videos { padding:6rem 2rem; }
+    #videos h3 { text-align:center; font-size:2.5rem; margin-bottom:2rem; color:#f9f4e6; }
+    .videos-grid {
+      display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem;
+    }
+    .videos-grid iframe { border-radius:12px; }
+
+    /* NEWS HIGHLIGHTS */
+    #news { padding:6rem 2rem; background:#111; }
+    #news h3 { text-align:center; font-size:2.5rem; margin-bottom:2rem; color:#f9f4e6;}
+    .news-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem;
+    }
+    .news-card {
+      background:rgba(255,255,255,0.05); border-radius:12px; overflow:hidden;
+    }
+    .news-card img { width:100%; height:140px; object-fit:cover; }
+    .news-card .content { padding:1rem; }
+    .news-card .content h4 { font-size:1.1rem; margin-bottom:.5rem; }
+    .news-card .content p { font-size:0.9rem; line-height:1.4; color:#ccc; }
+    .news-card .content a { font-size:0.85rem; color:#1bffff; }
+
+    /* YAP SESSION */
+    #yap { padding:6rem 2rem; background:#1a1a1a; }
+    #yap h3 {
+      text-align:center; font-size:2.5rem; margin-bottom:2rem; color:#f9f4e6;
+    }
+    .yap-container {
+      max-width:800px; margin:0 auto; color:#ddd; line-height:1.6;
+    }
+    .yap-container p, .yap-container ul {
+      margin-bottom:1rem;
+    }
+    .yap-container ul { padding-left:1.5rem; }
+
+    /* AUDIO CONTROLS */
+    #audio-controls {
+      position:fixed; bottom:1rem; left:1rem; z-index:999;
+      background:rgba(0,0,0,0.6); padding:.5rem 1rem; border-radius:8px;
+      display:flex; align-items:center; gap:.5rem;
+    }
+    #mute-btn { font-size:1.2rem; background:none; border:none; cursor:pointer; color:#fff; }
+    #volume-slider { width:100px; }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .timeline-item { grid-template-columns:1fr !important; }
+      .stats-grid, .videos-grid, .news-grid { grid-template-columns:1fr; }
+      .hero-img { display:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO DARK -->
+  <section id="hero1" class="animate-on-scroll animate__animated animate__fadeIn">
+    <img src="https://c4.wallpaperflare.com/wallpaper/305/945/88/stephen-curry-golden-state-warriors-people-wallpaper-preview.jpg" alt="Curry" class="hero-img animate__animated animate__fadeIn">
+    <div class="hero1-content">
+      <h1 class="animate__animated animate__fadeInDown">STEPHEN CURRY • #30 G</h1>
+      <div class="player-cards animate__animated animate__fadeInUp">
+        <div class="player-card" style="animation-delay:0s">
+          <h4>2009–10</h4>
+          <img src="https://preview.redd.it/sbmqzt3oi7w71.jpg?auto=webp&s=f002d5867c8c5969bb38db40a3e09b9c23fdba63" alt="2009–10 Curry">
+          <ul>
+            <li><strong>17.5</strong> PPG</li>
+            <li><strong>5.9</strong> AST</li>
+            <li>46.2% FG</li>
+            <li>43.7% 3P</li>
+            <li>88.5% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:.2s">
+          <h4>2010–11</h4>
+          <img src="https://preview.redd.it/sbmqzt3oi7w71.jpg?auto=webp&s=f002d5867c8c5969bb38db40a3e09b9c23fdba63" alt="2010–11 Curry">
+          <ul>
+            <li><strong>18.6</strong> PPG</li>
+            <li><strong>5.8</strong> AST</li>
+            <li>48.0% FG</li>
+            <li>44.2% 3P</li>
+            <li>93.4% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:.4s">
+          <h4>2011–12</h4>
+          <img src="https://media.zenfs.com/en/the_independent_577/d8956263c467f30725b8efa64080b89b" alt="2011–12 Curry">
+          <ul>
+            <li><strong>14.7</strong> PPG</li>
+            <li><strong>5.3</strong> AST</li>
+            <li>49.0% FG</li>
+            <li>45.5% 3P</li>
+            <li>80.9% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:.6s">
+          <h4>2012–13</h4>
+          <img src="https://phantom-marca.unidadeditorial.es/10c5cee75ac7b6e21a92d9969670a98b/resize/1320/f/jpg/assets/multimedia/imagenes/2022/11/21/16690102846317.jpg" alt="2012–13 Curry">
+          <ul>
+            <li><strong>22.9</strong> PPG</li>
+            <li><strong>6.9</strong> AST</li>
+            <li>45.1% FG</li>
+            <li>45.3% 3P</li>
+            <li>90.0% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:.8s">
+          <h4>2013–14</h4>
+          <img src="https://media.nbcsportsbayarea.com/2024/08/steph-curry-GettyImages-2166237532.jpg?quality=85&strip=all&resize=1200%2C675" alt="2013–14 Curry">
+          <ul>
+            <li><strong>24.0</strong> PPG</li>
+            <li><strong>8.5</strong> AST</li>
+            <li>47.1% FG</li>
+            <li>42.4% 3P</li>
+            <li>88.5% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:1s">
+          <h4>2014–15</h4>
+          <img src="https://images.genius.com/6c824091019c0febd52decd78adbde80.1000x750x1.jpg" alt="2014–15 Curry">
+          <ul>
+            <li><strong>23.8</strong> PPG</li>
+            <li><strong>7.7</strong> AST</li>
+            <li>48.7% FG</li>
+            <li>44.3% 3P</li>
+            <li>91.4% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:1.2s">
+          <h4>2015–16</h4>
+          <img src="https://a.espncdn.com/media/motion/2015/0414/dm_150413_NADmvprace1045/dm_150413_NADmvprace1045.jpg?w=1600" alt="2015–16 Curry">
+          <ul>
+            <li><strong>30.1</strong> PPG</li>
+            <li><strong>6.7</strong> AST</li>
+            <li>50.4% FG</li>
+            <li>45.4% 3P</li>
+            <li>90.8% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:1.4s">
+          <h4>2016–17</h4>
+          <img src="https://th.bing.com/th/id/R.d3f9ac818050eaf371e913e9dc27f8b9?rik=EOAbZOTYGycj4g&pid=ImgRaw&r=0" alt="2016–17 Curry">
+          <ul>
+            <li><strong>25.3</strong> PPG</li>
+            <li><strong>6.6</strong> AST</li>
+            <li>46.8% FG</li>
+            <li>41.1% 3P</li>
+            <li>89.8% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:1.6s">
+          <h4>2017–18</h4>
+          <img src="https://images.complex.com/complex/images/c_scale,q_auto,w_1920/fl_lossy,pg_1/whouyhhce4ml6oc2fa8s/steph-curry-2017-nba-finals" alt="2017–18 Curry">
+          <ul>
+            <li><strong>26.4</strong> PPG</li>
+            <li><strong>6.1</strong> AST</li>
+            <li>49.5% FG</li>
+            <li>42.3% 3P</li>
+            <li>92.1% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:1.8s">
+          <h4>2018–19</h4>
+          <img src="https://th.bing.com/th/id/OIP.iYprerKiU3NrJ-_umZ3T2wHaJr?rs=1&pid=ImgDetMain" alt="2018–19 Curry">
+          <ul>
+            <li><strong>27.3</strong> PPG</li>
+            <li><strong>5.2</strong> AST</li>
+            <li>47.2% FG</li>
+            <li>43.7% 3P</li>
+            <li>91.6% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:2s">
+          <h4>2019–20</h4>
+          <img src="https://th.bing.com/th/id/OIP.hEegv_weWfQpHScb1P7qlAHaE7?rs=1&pid=ImgDetMain" alt="2019–20 Curry">
+          <ul>
+            <li><strong>20.8</strong> PPG</li>
+            <li><strong>6.6</strong> AST</li>
+            <li>40.2% FG</li>
+            <li>24.5% 3P</li>
+            <li>63.6% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:2.2s">
+          <h4>2020–21</h4>
+          <img src="https://www.nbcsports.com/sites/rsnunited/files/styles/metatags_opengraph/public/article/hero/Steph-Curry-US-15393806.jpg" alt="2020–21 Curry">
+          <ul>
+            <li><strong>32.0</strong> PPG</li>
+            <li><strong>5.8</strong> AST</li>
+            <li>48.2% FG</li>
+            <li>42.1% 3P</li>
+            <li>91.6% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:2.4s">
+          <h4>2021–22</h4>
+          <img src="https://th.bing.com/th/id/OIP.uRon1aNQ0tEfsl5ZQp-cFAHaJQ?rs=1&pid=ImgDetMain" alt="2021–22 Curry">
+          <ul>
+            <li><strong>25.5</strong> PPG</li>
+            <li><strong>6.3</strong> AST</li>
+            <li>43.7% FG</li>
+            <li>38.0% 3P</li>
+            <li>92.3% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:2.6s">
+          <h4>2022–23</h4>
+          <img src="https://i.pinimg.com/736x/ec/dc/99/ecdc99f9ea920a8e88a6e9191be3ed35.jpg" alt="2022–23 Curry">
+          <ul>
+            <li><strong>29.4</strong> PPG</li>
+            <li><strong>6.3</strong> AST</li>
+            <li>49.3% FG</li>
+            <li>42.7% 3P</li>
+            <li>91.5% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:2.8s">
+          <h4>2023–24</h4>
+          <img src="https://th.bing.com/th/id/OIP.i7Hu6W5MxrFJZivMN2yLvwHaLH?rs=1&pid=ImgDetMain" alt="2023–24 Curry">
+          <ul>
+            <li><strong>26.4</strong> PPG</li>
+            <li><strong>5.1</strong> AST</li>
+            <li>45.0% FG</li>
+            <li>40.8% 3P</li>
+            <li>92.3% FT</li>
+          </ul>
+        </div>
+        <div class="player-card" style="animation-delay:3s">
+          <h4>2024–25</h4>
+          <img src="https://th.bing.com/th/id/R.d0ac262a8679de4adff3b03cdd6691fb?rik=oNYBaMimbhVwQg&riu=http%3a%2f%2fcontents.spin.ph%2fimage%2fresize%2fimage%2f2022%2f11%2f12%2fsteph-curry-1668233538.webp&ehk=mb5ciXfhbyfd43ha0LRze5c4g1ZZtC0ltmg%2flr9ASNk%3d&risl=&pid=ImgRaw&r=0" alt="2024–25 Curry">
+          <ul>
+            <li><strong>23.9</strong> PPG</li>
+            <li><strong>6.6</strong> AST</li>
+            <li>48.1% FG</li>
+            <li>43.2% 3P</li>
+            <li>93.9% FT</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO CTA -->
+  <section id="hero2" class="animate-on-scroll animate__animated animate__fadeIn">
+    <h2 class="animate__animated animate__zoomIn">STEPHEN CURRY</h2>
+    <div class="hero2-buttons animate__animated animate__fadeInUp">
+      <a href="#timeline" class="btn outline">TIMELINE</a>
+      <a href="#yap" class="btn primary">CURRY>LEBRON</a>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="animate-on-scroll">
+    <div class="timeline-container">
+      <div class="timeline-item animate__animated animate__fadeInLeft">
+        <img src="https://preview.redd.it/sbmqzt3oi7w71.jpg?auto=webp&s=f002d5867c8c5969bb38db40a3e09b9c23fdba63" alt="2009–10 Rookie">
+        <div class="info">
+          <h4>2009–10: Rookie Season</h4>
+          <p>Curry exploded with <strong>17.5 PPG, 5.9 AST, 4.5 RPG</strong> and shot <strong>46.2% FG / 43.7% 3P / 88.5% FT</strong> across 80 games.</p>
+        </div>
+      </div>
+      <div class="timeline-item animate__animated animate__fadeInRight">
+        <div class="info">
+          <h4>2015–16: Unanimous MVP</h4>
+          <p>Averaged <strong>30.1 PPG, 6.7 AST</strong> on <strong>50% FG / 45% 3P / 90% FT</strong>, becoming the NBA’s first unanimous MVP.</p>
+        </div>
+        <img src="https://th.bing.com/th/id/R.4ee5dbbcb2c40da7c58071678e34126e?rik=%2bjzVx4DjiOTUdA&riu=http%3a%2f%2fvideos.usatoday.net%2fBrightcove2%2f29906170001%2f2016%2f05%2f29906170001_4887193907001_thumb-TimeInc4887151229001.jpg%3fpubId%3d29906170001&ehk=%2f9TArXRSzBbI5RQiArw4d1%2bPeSb2Jo%2fWIRr5upG%2b9dI%3d&risl=&pid=ImgRaw&r=0" alt="2016 MVP">
+      </div>
+      <div class="timeline-item animate__animated animate__fadeInLeft">
+        <img src="https://images.wallpapersden.com/image/download/stephen-curry-nba-final-mvp-2022_bWlpaGWUmZqaraWkpJRmaWllrW5lZQ.jpg" alt="2022 Champion">
+        <div class="info">
+          <h4>2021–22: Fourth NBA Title</h4>
+          <p>Led GSW to the title with <strong>25.5 PPG, 6.3 AST</strong> on <strong>48% FG / 42% 3P / 91% FT</strong>, earning Finals MVP.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS & TROPHIES -->
+  <section id="stats" class="animate-on-scroll">
+    <div class="stats-container">
+      <h3 class="animate__animated animate__fadeInDown">2024–25 Season Averages</h3>
+      <div class="stats-grid">
+        <div class="card animate__animated animate__fadeInUp"><h4 class="count">24.5</h4><span>PPG</span></div>
+        <div class="card animate__animated animate__fadeInUp" style="animation-delay:.3s"><h4 class="count">7.1</h4><span>AST</span></div>
+        <div class="card animate__animated animate__fadeInUp" style="animation-delay:.6s"><h4 class="count">41.8%</h4><span>3P%</span></div>
+        <div class="card animate__animated animate__fadeInUp" style="animation-delay:.9s"><h4 class="count">45.3%</h4><span>FG%</span></div>
+        <div class="card animate__animated animate__fadeInUp" style="animation-delay:1.2s"><h4 class="count">91.2%</h4><span>FT%</span></div>
+      </div>
+      <div class="trophies">
+        <div class="group animate__animated animate__fadeInUp"><img src="https://media.discordapp.net/attachments/1140839432489009263/1367428886690005042/image-removebg-preview_11.png?ex=68148ce4&is=68133b64&hm=70c3ced259c48f4e6ad1670fef0c17f054c2849c6be2eb2de1f3a0dfe8bfe692&=&format=webp&quality=lossless" alt="Champs"><p>4× Champion</p></div>
+        <div class="group animate__animated animate__fadeInUp" style="animation-delay:.3s"><img src="https://media.discordapp.net/attachments/1140839432489009263/1367435291463516242/image-removebg-preview_12.png?ex=681492db&is=6813415b&hm=d7ccf6479c419f38aa8436ea9994a2174d16040251e1b153e204a9e2fba60b84&=&format=webp&quality=lossless" alt="MVPs"><p>2× MVP</p></div>
+        <div class="group animate__animated animate__fadeInUp" style="animation-delay:.6s"><img src="https://media.discordapp.net/attachments/1140839432489009263/1367435529205055538/image-removebg-preview_13.png?ex=68149313&is=68134193&hm=59ef009e720639884fe6b68b3b9392deca662ed9669897a1a87ba89b37f8539a&=&format=webp&quality=lossless" alt="All-Stars"><p>10× All-Star</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos" class="animate-on-scroll">
+    <h3 class="animate__animated animate__fadeInDown">GOAT Campaign Videos</h3>
+    <div class="videos-grid">
+      <iframe class="animate__animated animate__fadeInUp" src="https://www.youtube.com/embed/hUOfC2ilXak" frameborder="0" allowfullscreen></iframe>
+      <iframe class="animate__animated animate__fadeInUp" style="animation-delay:.6s" src="https://www.youtube.com/embed/Rx-2TtG3LBA" frameborder="0" allowfullscreen></iframe>
+      <iframe class="animate__animated animate__fadeInUp" style="animation-delay:.6s" src="https://www.youtube.com/embed/ZXyIHe-iY7Q" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- NEWS HIGHLIGHTS -->
+  <section id="news" class="animate-on-scroll animate__animated animate__fadeIn">
+    <h3>News Highlights</h3>
+    <div class="news-grid">
+      <!-- ESPN -->
+      <div class="news-card">
+        <img src="https://pluspng.com/img-png/espn-logo-png-espn-logo-pluspng-4097x4096.png" alt="ESPN Story">
+        <div class="content">
+          <h4>First Unanimous MVP</h4>
+          <p>Curry made history as the NBA’s first unanimously voted MVP (131–0).</p>
+          <a href="https://www.espn.com/nba/story/_/id/15499690/stephen-curry-golden-state-warriors-first-unanimous-most-valuable-player" target="_blank">Read on ESPN</a>
+        </div>
+      </div>
+      <!-- SF Chronicle -->
+      <div class="news-card">
+        <img src="https://dispatch-apps-production.s3-us-west-2.amazonaws.com/press-logos/sf-chronicle-logo.png" alt="4,000 3-pointers">
+        <div class="content">
+          <h4>4,000 3-Pointers Milestone</h4>
+          <p>Curry’s 4,000th career triple solidifies his status as the greatest shooter ever.</p>
+          <a href="https://www.sfchronicle.com/sports/annkillion/article/steph-curry-s-4-000-3-pointers-testament-20220559.php" target="_blank">Read on SF Chronicle</a>
+        </div>
+      </div>
+      <!-- GQ -->
+      <div class="news-card">
+        <img src="https://www.gq.com/verso/static/gq-global/assets/logo.svg" alt="GQ Profile">
+        <div class="content">
+          <h4>How He Became the NBA’s Best</h4>
+          <p>In-depth feature on Curry’s career, leadership, and off-court impact.</p>
+          <a href="https://www.gq.com/story/steph-curry-nba-best-player" target="_blank">Read on GQ</a>
+        </div>
+      </div>
+      <!-- TIME -->
+      <div class="news-card">
+        <img src="https://1000logos.net/wp-content/uploads/2020/03/TIME-Logo-1977.png" alt="Time Reactions">
+        <div class="content">
+          <h4>Internet Reacts to MVP</h4>
+          <p>TIME chronicles the memes and reactions to Curry’s historic unanimous MVP.</p>
+          <a href="https://time.com/4324795/steph-curry-mvp-nba-unanimous/" target="_blank">Read on Time</a>
+        </div>
+      </div>
+      <!-- Bleacher Report -->
+      <div class="news-card">
+        <img src="https://th.bing.com/th/id/OIP.GHF8ElmXHb89Dzh3xa0-KwHaFj?rs=1&pid=ImgDetMain" alt="Bleacher Report">
+        <div class="content">
+          <h4>He Broke the 3-Pt Record</h4>
+          <p>Curry shattered his own single-season 3P mark with 403 treys in 2015–16.</p>
+          <a href="https://bleacherreport.com/articles/2633782-stephen-curry-reportedly-will-win-mvp-award-for-2015-16-nba-season" target="_blank">Read on B/R</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="yap" class="animate-on-scroll">
+    <h3 class="animate__animated animate__fadeInDown">Why Steph Curry Is the GOAT</h3>
+    <div class="yap-container">
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:0s"><strong>1. Revolutionary Shooter:</strong> First player ever to average 45%+ from three-point range on 30+ attempts per game—rewrote the shooter’s playbook.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:.3s"><strong>2. Efficiency Meets Volume:</strong> Only 50/45/90 season with 30+ PPG on high usage—unicorn-level scoring formula.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:.6s"><strong>3. Gravity Creator:</strong> Forced defenses to guard past half-court; league-wide 3PA rose from ~27% to 42% within five seasons of his breakout.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:.9s"><strong>4. Clutch Performer:</strong> All-time leader in playoff games with 30+ points, including multiple buzzer-beaters and game-winning threes.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:1.2s"><strong>5. Championship Pedigree:</strong> Four NBA titles, three Finals MVP nods, and architect of three 65+ win seasons—dominated regular season and playoffs alike.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:1.5s"><strong>6. Legacy &amp; Influence:</strong> Transformed youth basketball: every prospect now trains with deep range, handles, and catch-&amp;-shoot drills.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:1.8s"><strong>7. Unstoppable Range:</strong> Career 35+ foot makes per season top five all-time—stretches defenses to breaking point.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:2.1s"><strong>8. Off-Dribble Mastery:</strong> Leads all guards in off-the-dribble three-point attempts and efficiency; makes contested pull-ups look routine.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:2.4s"><strong>9. Playmaking Prowess:</strong> Averages 6+ assists on 42% usage—seamlessly balances shot-creator and floor general roles.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:2.7s"><strong>10. Durability &amp; Longevity:</strong> Over 800 games played with MVP-caliber performance into his mid-30s, defying age curves.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:3s"><strong>11. Work Ethic &amp; Craft:</strong> Known for pregame sessions of 500+ pull-ups and range drills—unmatched commitment to continual improvement.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:3.3s"><strong>12. Team Uplift:</strong> Warriors’ net rating jumps +12 when he’s on court—teammates’ shooting percentages and confidence soar.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:3.6s"><strong>13. Analytical Darling:</strong> Tops advanced metrics—highest career true shooting percentage among high-volume guards and elite RAPTOR wins generated.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:3.9s"><strong>14. Record-Setter:</strong> Single-season high of 402 threes in 2015–16; first to hit 300+ threes in five straight seasons.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:4.2s"><strong>15. Free-Throw Wizard:</strong> Led league in FT% six times, career mark above .910—automatic points in crunch time.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:4.5s"><strong>16. Spacing Specialist:</strong> His mere presence expands defenses to 30 feet, creating driving lanes and post-up space.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:4.8s"><strong>17. Defensive Growth:</strong> Improved steal rates and on-ball pressure over career; added 6′3″ wingspan mismatches in switch-heavy schemes.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:5.1s"><strong>18. Finals Clutchness:</strong> Averages 28 PPG on 49/46/92 shooting in Finals appearances—elevates performance when stakes peak.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:5.4s"><strong>19. Milestone Master:</strong> Fastest to 2,000 career threes; only player with 3,000+ three-pointers and 1,000+ assists.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:5.7s"><strong>20. Evolution Architect:</strong> Teams now craft rosters around shooting gravity—legacy beyond stats to strategic DNA.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:6s"><strong>21. Rookie Impact:</strong> Changed opposing schemes as a rookie—opponents scouted more for his pull-up than marquee veterans.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:6.3s"><strong>22. Teammate Chemistry:</strong> Draymond, Klay, and Poole’s careers skyrocketed; Curry’s gravity maximizes every roster spot.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:6.6s"><strong>23. Cultural Icon:</strong> Global ambassador through Under Armour line, international camps, and digital training series—branded basketball’s modern era.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:6.9s"><strong>24. IQ &amp; Vision:</strong> High basketball IQ shows in reaction to switches, deflections, and reading coverage—anticipation yields easy baskets.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:7.2s"><strong>25. Playoff Performer:</strong> Career playoff true shooting above .620; single-series FG% records in multiple elimination rounds.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:7.5s"><strong>26. MVP-Caliber Leadership:</strong> Two MVPs (one unanimous); carries locker room ethos of joy, toughness, and relentless pursuit.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:7.8s"><strong>27. Off-Court Impact:</strong> Philanthropy through Eat. Learn. Play. foundation, tech investments, and media ventures—footprint beyond hardwood.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:8.1s"><strong>28. Adaptive Scorer:</strong> Flourished in small-ball “Death Lineup” and two-big systems; fit any era’s pace and space demands.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:8.4s"><strong>29. Consistency Under Pressure:</strong> Career-wide buzzer-beaters, 40-point playoff games, and undefeated Game 7 record when he’s healthy.</p>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:8.7s"><strong>30. The Unseen Impact:</strong> Opponents spend 60% of possessions hedging his screens, clogging lanes—his gravity creates hundreds of extra possessions for teammates.</p>
+      <ul class="animate__animated animate__fadeInUp" style="animation-delay:9s">
+        <li>Shot 402 3-pointers in 2015–16, a single-season record at the time.</li>
+        <li>Two-time scoring champion &amp; six-time All-NBA First Team member.</li>
+        <li>Fastest to 2,000 career threes; only player with 3,000+ threes and 1,000+ assists.</li>
+        <li>Holds NBA record for most 30-point playoff games (45+).</li>
+        <li>Led league in free-throw percentage six times, career .912 mark.</li>
+        <li>Two-time Olympic gold medalist with Team USA.</li>
+        <li>NBA record for most games with 10+ threes in a single season (13 in 2021–22).</li>
+      </ul>
+      <p class="animate__animated animate__fadeInUp" style="animation-delay:9.3s">While LeBron’s all-around brilliance and physical dominance are historic, Curry’s innovation reshaped the entire sport—from youth leagues to analytics departments. No other player has simultaneously altered strategy, inspired a generation of shooters, and sustained elite performance this comprehensively. That is why Stephen Curry stands unchallenged as basketball’s true GOAT.</p>
+    </div>
+  </section>
+
+
+  <!-- AUDIO CONTROLS -->
+  <div id="audio-controls">
+    <audio id="bg-audio"
+           src="https://cdn.discordapp.com/attachments/1140839432489009263/1367429128474726440/4K_Steph_CurryEDITRunaway.mp4?ex=68148d1d&is=68133b9d&hm=d0e2074085c33372630aae93970f7ff79f3d4cde91abf44e7deb57574805edbc&"
+           loop autoplay style="display:none;"></audio>
+    <button id="mute-btn" title="Mute/Unmute">🔊</button>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" title="Volume">
+  </div>
+
+  <script>
+    // On-scroll animations
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('animate__animated');
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => obs.observe(el));
+
+    // Hero & stats CountUp
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroKeys = ['ppg1','ast1','fg1','3p1','ft1'];
+      const heroData = { ppg1:24.5, ast1:7.1, fg1:45.3, '3p1':41.8, ft1:91.2 };
+      heroKeys.forEach((k,i) => {
+        new CountUp(document.getElementById(k), heroData[k], { decimals:1, duration:2 }).start();
+      });
+      // Stats section (redundant, same data)
+      document.querySelectorAll('#stats .card h4').forEach((el,i) => {
+        const val = Object.values(heroData)[i];
+        new CountUp(el, val, { decimals: i>1?1:1, duration:1.5 }).start();
+      });
+    });
+
+    // Background audio controls
+    const audio   = document.getElementById('bg-audio');
+    const btn     = document.getElementById('mute-btn');
+    const slider  = document.getElementById('volume-slider');
+    audio.volume = slider.value;
+    btn.textContent = audio.muted ? '🔇' : '🔊';
+    document.body.addEventListener('click', () => audio.play().catch(()=>{}), { once:true });
+    btn.addEventListener('click', () => {
+      audio.muted = !audio.muted;
+      btn.textContent = audio.muted ? '🔇' : '🔊';
+      if (!audio.muted) audio.play().catch(()=>{});
+    });
+    slider.addEventListener('input', e => {
+      audio.volume = e.target.value;
+      if (audio.muted && audio.volume>0) {
+        audio.muted = false;
+        btn.textContent = '🔊';
+        audio.play().catch(()=>{});
+      }
+      // ─── Keep-alive ping every 10 seconds ───────────────────────────────
+      setInterval(() => {
+        fetch('/ping').catch(() => {});
+      }, 10 * 1000);
+      // ────────────────────────────────────────────────────────────────────
+    });
+  </script>
+
+</body>
+</html>
